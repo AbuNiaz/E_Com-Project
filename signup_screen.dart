@@ -1,4 +1,4 @@
-import 'package:e_com/login_screen.dart';
+import 'package:e_com/Main_Page/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -11,7 +11,6 @@ class SignUpPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -37,7 +36,7 @@ class SignUpPage extends StatelessWidget {
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Text(
                     "Create an account.It's free",
@@ -45,14 +44,17 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 30,
+              ),
               Column(
                 children: <Widget>[
-                  InputFile(
+                  buildInputFile(
                     lable: "User Name",
                   ),
-                  InputFile(lable: "Email"),
-                  InputFile(lable: "Password", obscureText: true),
-                  InputFile(lable: "Comfirm Password", obscureText: true),
+                  buildInputFile(lable: "Email"),
+                  buildInputFile(lable: "Password", obscureText: true),
+                  buildInputFile(lable: "Comfirm Password", obscureText: true),
                 ],
               ),
               Container(
@@ -92,19 +94,18 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text("Already have an account?"),
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.amberAccent.shade400,
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Already have an account?"),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Log in"),
                     ),
-                  )
-                ],
+                  ],
+                ),
               )
             ],
           ),
@@ -116,7 +117,7 @@ class SignUpPage extends StatelessWidget {
 
 //
 //
-Widget InputFile({lable, obscureText = false}) {
+Widget buildInputFile({lable, obscureText = false}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
