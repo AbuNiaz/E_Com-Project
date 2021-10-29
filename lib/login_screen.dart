@@ -1,3 +1,5 @@
+import 'package:e_com/Home_Screen/first_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,7 +12,6 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -49,8 +50,8 @@ class LoginPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
                     children: <Widget>[
-                      InputFile(lable: "Email"),
-                      InputFile(lable: "Password", obscureText: true)
+                      buildInputFile(lable: "Email"),
+                      buildInputFile(lable: "Password", obscureText: true)
                     ],
                   ),
                 ),
@@ -69,7 +70,12 @@ class LoginPage extends StatelessWidget {
                     child: MaterialButton(
                       minWidth: double.infinity,
                       height: 50,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyApp()),
+                        );
+                      },
                       color: Colors.blue,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
@@ -89,10 +95,9 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text("Dont have an account?"),
-                    Text(
-                      "Sign Up",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Sign Up"),
                     )
                   ],
                 ),
@@ -105,7 +110,7 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-Widget InputFile({lable, obscureText = false}) {
+Widget buildInputFile({lable, obscureText = false}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
