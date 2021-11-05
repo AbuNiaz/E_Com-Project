@@ -25,7 +25,18 @@ flutter:
   # To add assets to your package, add an assets section, like this:
   assets:
   - images/HomePic.jpg
-  #   - images/a_dot_ham.jpeg
+  - images/black_top.png
+  - images/kids.png
+  - images/woman.png
+  - images/Pic1.jpg
+  - images/Pic2.jpg
+  - images/Pic3.jpg
+  - images/Pic4.jpg
+  - images/Pic5.jpg
+  - images/Pic6.jpg
+  - images/Card.png
+  - images/like.png
+ 
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages

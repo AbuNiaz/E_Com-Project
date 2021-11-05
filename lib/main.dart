@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import 'package:e_com/login_screen.dart';
 import 'package:e_com/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -104,3 +105,14 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+=======
+import 'package:e_com/Main_Page/home.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: HomePage(),
+  ));
+}
+>>>>>>> Stashed changes
