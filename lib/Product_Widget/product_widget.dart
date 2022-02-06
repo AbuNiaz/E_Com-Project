@@ -66,7 +66,7 @@ class MyProductList extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 5,
+              height: 6,
             ),
             Text(
               "\$ $price",
