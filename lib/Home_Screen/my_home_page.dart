@@ -18,84 +18,85 @@ class MyHomePageVeiw extends StatelessWidget {
         actions: [],
       ),
       body: SingleChildScrollView(
-          child: Container(
-              width: 450,
-              child: Column(children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                      top: 8.0, bottom: 8.0, left: 20, right: 20),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                            decoration: InputDecoration(
-                          contentPadding:
-                              EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-                          border: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.grey.shade400),
-                              borderRadius: BorderRadius.circular(60)),
-                          icon: Icon(Icons.search),
-                          hintText: "Search Your Product",
-                        )),
+        child: Container(
+          width: 450,
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 8.0, bottom: 8.0, left: 20, right: 20),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        contentPadding:
+                            EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey.shade400),
+                            borderRadius: BorderRadius.circular(60)),
+                        icon: Icon(Icons.search),
+                        hintText: "Search Your Product",
                       ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Categories",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
-                    TextButton(onPressed: () {}, child: Text("See all"))
-                  ],
-                ),
-                Container(
-                  height: 40,
-                  width: MediaQuery.of(context).size.width,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      buildFlatButton("Man"),
-                      buildFlatButton("Woman"),
-                      buildFlatButton("Children"),
-                      buildFlatButton("Others")
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Feature",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
-                    TextButton(onPressed: () {}, child: Text("See all"))
-                  ],
-                ),
-                MyProductList(),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Best Sell",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    TextButton(onPressed: () {}, child: Text("See all")),
-                  ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Categories",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                TextButton(onPressed: () {}, child: Text("See all"))
+              ],
+            ),
+            Container(
+              height: 40,
+              width: MediaQuery.of(context).size.width,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  buildFlatButton("Man"),
+                  buildFlatButton("Woman"),
+                  buildFlatButton("Children"),
+                  buildFlatButton("Others")
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Feature",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                TextButton(onPressed: () {}, child: Text("See all"))
+              ],
+            ),
+            MyProductList(),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Best Sell",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                MyProductList(),
-              ]))),
+                TextButton(onPressed: () {}, child: Text("See all")),
+              ],
+            ),
+            MyProductList(),
+          ]),
+        ),
+      ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
 
